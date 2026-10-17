@@ -13,6 +13,7 @@ attacks, Flutter/TLS bypasses, and runtime instrumentation with Frida.
 | **FactsDroid** | Flutter app exploitation | Missing TLS validation → MITM response tampering (root check + Flutter TLS bypass) | jadx, apktool, blutter, Frida, mitmproxy | [factsdroid/](factsdroid/) |
 | **AndroDialer** | Android component abuse | Confused deputy via exported activity + hardcoded auth token | jadx, adb, deep links | [androdialer/](androdialer/) |
 | **AndroPseudoProtect** | Android IPC abuse | Exported receiver/service authenticated by an observable runtime secret | JADX, Frida, ADB | [andropseudoprotect/](andropseudoprotect/) |
+| **DroidCave** | Android IPC abuse | Exposed ContentProvider: arbitrary SQL injection + IPC-toggleable encryption | adb, JADX | [droidcave/](droidcave/) |
 
 ## Repository Structure
 
