@@ -14,6 +14,7 @@ attacks, Flutter/TLS bypasses, and runtime instrumentation with Frida.
 | **AndroDialer** | Android component abuse | Confused deputy via exported activity + hardcoded auth token | jadx, adb, deep links | [androdialer/](androdialer/) |
 | **AndroPseudoProtect** | Android IPC abuse | Exported receiver/service authenticated by an observable runtime secret | JADX, Frida, ADB | [andropseudoprotect/](andropseudoprotect/) |
 | **DroidCave** | Android IPC abuse | Exposed ContentProvider: arbitrary SQL injection + IPC-toggleable encryption | adb, JADX | [droidcave/](droidcave/) |
+| **PortSwigger — SQL Injection** (18 labs) | Web / SQLi | UNION, blind boolean/error/time/OOB, error-based, WAF bypass | Burp Suite, Collaborator | [portswigger/sql-injection/](portswigger/sql-injection/) |
 
 ## Repository Structure
 
@@ -29,6 +30,11 @@ attacks, Flutter/TLS bypasses, and runtime instrumentation with Frida.
 ├── andropseudoprotect/      # 8kSec Battlegrounds
 │   ├── README.md            # Solution write-up
 │   └── payloads.md          # Quick-reference payload list
+├── droidcave/               # 8kSec — Secure Password Management
+│   ├── README.md            # Solution write-up
+│   └── droidcave_payload.sh # Automated solver script
+├── portswigger/             # PortSwigger Web Security Academy
+│   └── sql-injection/       # All 18 SQLi labs — solutions + index
 └── _TEMPLATE.md             # Template for new write-ups
 ```
 
