@@ -1,0 +1,29 @@
+# Lab binaries & archives — never redistribute APKs or challenge files
+*.apk
+*.aab
+*.apks
+*.zip
+*.rar
+*.7z
+*.ipa
+
+# Reverse-engineering output
+jadx-out/
+apktool-out/
+blutter-out/
+*.so.txt
+
+# Frida / runtime artifacts
+*.frida
+frida-trace/
+
+# OS & editor noise
+Thumbs.db
+.DS_Store
+~$*
+*.tmp
+
+# Python tooling
+__pycache__/
+*.pyc
+.venv/
