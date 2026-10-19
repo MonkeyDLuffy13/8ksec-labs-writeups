@@ -10,7 +10,7 @@
 | **Vulnerability class** | &lt;e.g. exported component, confused deputy, TLS bypass&gt; |
 | **Severity** | &lt;High / Medium / ...&gt; |
 | **Tools** | &lt;JADX, apktool, Frida, adb, mitmproxy ...&gt; |
-| **Status** | ✅ Solved |
+| **Status** | Solved |
 
 ---
 

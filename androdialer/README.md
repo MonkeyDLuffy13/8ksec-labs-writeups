@@ -1,6 +1,6 @@
 # 8kSec Academy — AndroDialer: The Ultimate Phone Experience
 
-**Payload & Solution Write-up — Status: APPROVED ✓**
+**Payload & Solution Write-up — Status: APPROVED **
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 | **Impact** | Silent call initiation from any app or web page, without `CALL_PHONE` permission and with no visible UI |
 | **Tested on** | Ubuntu VM + Genymotion/ADB lab device |
 | **Date** | 2026-10-14 |
-| **Challenge status** | ✅ **SOLVED — lab completed** |
+| **Challenge status** | **SOLVED — lab completed** |
 
 ---
 

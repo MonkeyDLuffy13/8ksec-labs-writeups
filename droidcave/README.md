@@ -1,5 +1,5 @@
 # 8kSec DroidCave — Secure Password Management
-## Solution Writeup & Payloads ✅ (Approved)
+## Solution Writeup & Payloads (Approved)
 
 > **Target:** DroidCave password manager (8kSec Android lab)
 > **Objective:** Exploit an exposed `ContentProvider` to decrypt and exfiltrate stored credentials
@@ -104,7 +104,7 @@ adb shell content query --uri content://com.eightksec.droidcave.provider/enable_
 
 ### 4.2 Method A+ — proving the SQLi via `execute_sql`
 
-⚠️ **Quoting trap:** quotes are consumed by your *local* shell; Android's `mksh`
+ **Quoting trap:** quotes are consumed by your *local* shell; Android's `mksh`
 then sees raw `(` and spaces → `syntax error: unexpected '('`.
 Two working fixes:
 
