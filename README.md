@@ -15,6 +15,11 @@ Frida, method swizzling, GPS spoofing, and deeplink abuse.
 | **AndroDialer** | Android component abuse | Confused deputy via exported activity + hardcoded auth token | jadx, adb, deep links | [androdialer/](androdialer/) |
 | **AndroPseudoProtect** | Android IPC abuse | Exported receiver/service authenticated by an observable runtime secret | JADX, Frida, ADB | [andropseudoprotect/](andropseudoprotect/) |
 | **DroidCave** | Android IPC abuse | Exposed ContentProvider: arbitrary SQL injection + IPC-toggleable encryption | adb, JADX | [droidcave/](droidcave/) |
+| **DroidPass** | Flutter static analysis | Hardcoded AES base key in Dart AOT snapshot → database decryption | strings, Ghidra, Python | [droidpass/](droidpass/) |
+| **DroidView** | WebView + IPC abuse | Exported Tor controller + WebView redirect → real-IP and inventory exfiltration | JADX, adb, intent URLs | [droidview/](droidview/) |
+| **DroidWars** | Dynamic code loading | Malicious DexClassLoader plugin inheriting host permissions | JADX, d8, Python server | [droidwars/](droidwars/) |
+| **GeofenceGamble** | Location spoofing | Geofence + anti-cheat evasion with realistic GPS traces | mock provider, Frida | [geofencegamble/](geofencegamble/) |
+| **ReconDroid** | Browser-based attack | intent:// URL from web page → exported export-component abuse | Chrome intents, JADX | [reconduroid/](reconduroid/) |
 | **BorderDroid** | Kiosk / device-policy abuse | Hidden volume-key backdoor + unauthenticated HTTP unlock + PIN brute force | adb, curl, arp-scan | [borderdroid/](borderdroid/) |
 
 ## iOS — Application Exploitation Challenges
